@@ -1,0 +1,13 @@
+<div *ngIf="inventory">
+  <h2>{{inventory.name}} details!</h2>
+  <div><label>id: </label>{{inventory.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="inventory.name" placeholder="name">
+  </div>
+  <div>
+    <label>value: </label>
+    <input [(ngModel)]="inventory.value" placeholder="value">
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>
