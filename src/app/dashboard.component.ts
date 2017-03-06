@@ -6,7 +6,8 @@ import { InventoryService }     from './inventory.service';
 @Component({
   moduleId: module.id,
   selector: 'my-dashboard',
-  templateUrl: './dashboard.component.html'
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
 
 export class DashboardComponent implements OnInit {
@@ -17,7 +18,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.inventoryService.getInventory()
-          .then(inventory => this.inventory = inventory.slice(2));
+          .then(inventory => this.inventory = inventory.slice(1,4));
   }
 
 }

@@ -9,29 +9,13 @@ import { InventoryComponent }      from './inventory.component';
 import { InventoryService }        from './inventory.service';
 import { DashboardComponent }      from './dashboard.component';
 
+import { AppRoutingModule }        from './app-routing.module';
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'inventory',
-        component: InventoryComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'detail/:id',
-        component: InventoryDetailComponent
-      }
-    ])
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,

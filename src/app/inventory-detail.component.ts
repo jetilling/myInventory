@@ -9,7 +9,8 @@ import 'rxjs/add/operator/switchMap';
 @Component({
   moduleId: module.id,
   selector: 'my-inventory-detail',
-  templateUrl: './inventory-detail.component.html'
+  templateUrl: './inventory-detail.component.html',
+  styleUrls: ['./inventory-detail.component.css']
 })
 
 export class InventoryDetailComponent implements OnInit {

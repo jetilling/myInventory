@@ -1,0 +1,10 @@
+<h2>Selected Item</h2>
+<ul class="inventory">
+  <li *ngFor="let item of inventory" [class.selected]="item === selectedInventory" (click)="onSelect(item)">
+    <span class="badge">{{item.id}}</span> {{item.name}} {{item.value}}
+  </li>
+</ul>
+<div *ngIf="selectedInventory">
+  <h2> {{ selectedInventory.name | uppercase }} is my item </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
